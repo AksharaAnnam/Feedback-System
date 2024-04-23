@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Sign Up</title>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation bar  -->
+    <nav class="navbar navbar-expand-lg my-nav my-0 py-0">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand platypi-regular" href="index.html">
+                <img src="CBIT logo.png" width="40px">
+                <span class="brand-logo">Feedback</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsedNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsedNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mynavitem"><a href="index.html" class="nav-link mylink abel-600">Home</a></li>
+                    <li class="nav-item dropdown mynavitem">
+                        <a class="nav-link mylink dropdown-toggle abel-600" role="button" data-bs-toggle="dropdown">
+                          Feedback
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item mylink abel-600" href="CourseFeedback.html">Course Feedback</a></li>
+                          <li><a class="dropdown-item mylink abel-600" href="CourseFeedback.html">Infrastructure Feedback</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mynavitem"><a href="Profile.html" class="nav-link mylink abel-600">Profile</a></li>
+                    <li class="nav-item mynavitem"><a href="about.html" class="nav-link mylink abel-600">About</a></li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">
+                            <div class="btn btn-success abel-600 py-1" >Login / Sign Up</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Login/Signup -->
+    <div class="container-fluid row d-flex justify-content-center mx-0 px-0 my-5 ">
+        <div class="col-10 col-md-6 mx-2 px-5 my-5 py-4 styleDiv">
+            <form id="registerForm" method="post">
+                <h3 class="abel-600" style="color:#213555;">Registration</h3>
+                <div class="eleDiv">
+                    <i class="fa fa-thin fa-user" style="font-size:1.9rem;"></i>
+                    <input class="px-3 abel-500" type="text" placeholder="Enter your name" style="border: none;background-color:#F0F0F0;width:100%;
+                    outline: none;" name="name" id="name" required>
+                </div>
+                <div class="eleDiv">
+                    <i class="fa-regular fa-envelope fa" style="font-size:1.7rem;"></i>
+                    <input class="px-3 abel-500" type="email" placeholder="Enter your email" style="border: none;background-color:#F0F0F0;width:100%;
+                    outline: none;" name="email" id="email" required>
+                </div>
+                <div class="eleDiv">
+                    <i class="fa-solid fa-id-card fa" style="font-size:1.7rem;"></i>
+                    <input class="px-3 abel-500" type="text" placeholder="Enter your ID(excluding hyphen(-))" style="border: none;background-color:#F0F0F0;width:100%;
+                    outline: none;" name="rollno" id="rollno" required>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <label class="abel-500" style="font-size: 1.2rem;font-weight: 600;">Add Course details</label><br/>
+                    <div>
+                        <label class="abel-500 form-label" style="font-size: 1.1rem;">Course Year-1</label>
+                        <table class="table abel-500" id="table1">
+                            <tr>
+                                <th>Course</th>
+                                <th>Section</th>
+                                <th></th>
+                            </tr>
+                        </table>
+                        <select class="form-select d-inline abel-500 mySelect" id="selcou1">
+                            <option value="">Course</option>
+                            <option value="Computer Organization and Architecture">Computer Organization and Architecture</option>
+                            <option value="Database Management Systems">Database Management Systems</option>
+                            <option value="Probability and Statistics">Probability and Statistics</option>
+                            <option value="Web Technologies">Web Technologies</option>
+                            <option value="Formal Language and Automata Theory">Formal Language and Automata Theory</option>
+                            <option value="Systems and Signal Processing">Systems and Signal Processing</option>
+                            <option value="Database Systems Lab">Database Systems Lab</option>
+                            <option value="Web Technologies Lab">Web Technologies Lab</option>
+                        </select>&nbsp
+                        <select class="form-select d-inline abel-500 mySelect" id="selsec1">
+                            <option value="">Section</option>
+                            <option>Section-1</option>
+                            <option>Section-2</option>
+                            <option>Section-3</option>
+                        </select>&nbsp
+                        <button onclick="addCourse('table1','selcou1','selsec1')" class="btn btn-outline-dark">Add</button>
+                    </div>
+                    <div class="mt-3">
+                        <label class="abel-500 form-label" style="font-size: 1.1rem;">Course Year-2</label>
+                        <table class="table abel-500" id="table2">
+                            <tr>
+                                <th>Course</th>
+                                <th>Section</th>
+                                <th></th>
+                            </tr>
+                        </table>
+                        <select class="form-select d-inline abel-500 mySelect" id="selcou2">
+                            <option value="">Course</option>
+                            <option value="Computer Organization and Architecture">Computer Organization and Architecture</option>
+                            <option value="Database Management Systems">Database Management Systems</option>
+                            <option value="Probability and Statistics">Probability and Statistics</option>
+                            <option value="Web Technologies">Web Technologies</option>
+                            <option value="Formal Language and Automata Theory">Formal Language and Automata Theory</option>
+                            <option value="Systems and Signal Processing">Systems and Signal Processing</option>
+                            <option value="Database Systems Lab">Database Systems Lab</option>
+                            <option value="Web Technologies Lab">Web Technologies Lab</option>
+                        </select>&nbsp
+                        <select class="form-select d-inline abel-500 mySelect" id="selsec2">
+                            <option value="">Section</option>
+                            <option>Section-1</option>
+                            <option>Section-2</option>
+                            <option>Section-3</option>
+                        </select>&nbsp
+                        <button onclick="addCourse('table2','selcou2','selsec2')" class="btn btn-outline-dark">Add</button>
+                    </div>
+                    <div class="mt-3">
+                        <label class="abel-500 form-label" style="font-size: 1.1rem;">Course Year-3</label>
+                        <table class="table abel-500" id="table3">
+                            <tr>
+                                <th>Course</th>
+                                <th>Section</th>
+                                <th></th>
+                            </tr>
+                        </table>
+                        <select class="form-select d-inline abel-500 mySelect" id="selcou3">
+                            <option value="">Course</option>
+                            <option value="Computer Organization and Architecture">Computer Organization and Architecture</option>
+                            <option value="Database Management Systems">Database Management Systems</option>
+                            <option value="Probability and Statistics">Probability and Statistics</option>
+                            <option value="Web Technologies">Web Technologies</option>
+                            <option value="Formal Language and Automata Theory">Formal Language and Automata Theory</option>
+                            <option value="Systems and Signal Processing">Systems and Signal Processing</option>
+                            <option value="Database Systems Lab">Database Systems Lab</option>
+                            <option value="Web Technologies Lab">Web Technologies Lab</option>
+                        </select>&nbsp
+                        <select class="form-select d-inline abel-500 mySelect" id="selsec3">
+                            <option value="">Section</option>
+                            <option>Section-1</option>
+                            <option>Section-2</option>
+                            <option>Section-3</option>
+                        </select>&nbsp
+                        <button onclick="addCourse('table3','selcou3','selsec3')" class="btn btn-outline-dark">Add</button>
+                    </div>
+                    <div class="mt-3">
+                        <label class="abel-500 form-label" style="font-size: 1.1rem;">Course Year-4</label>
+                        <table class="table abel-500" id="table4">
+                            <tr>
+                                <th>Course</th>
+                                <th>Section</th>
+                                <th></th>
+                            </tr>
+                        </table>
+                        <select class="form-select d-inline abel-500 mySelect" id="selcou4">
+                            <option value="">Course</option>
+                            <option value="Computer Organization and Architecture">Computer Organization and Architecture</option>
+                            <option value="Database Management Systems">Database Management Systems</option>
+                            <option value="Probability and Statistics">Probability and Statistics</option>
+                            <option value="Web Technologies">Web Technologies</option>
+                            <option value="Formal Language and Automata Theory">Formal Language and Automata Theory</option>
+                            <option value="Systems and Signal Processing">Systems and Signal Processing</option>
+                            <option value="Database Systems Lab">Database Systems Lab</option>
+                            <option value="Web Technologies Lab">Web Technologies Lab</option>
+                        </select>&nbsp
+                        <select class="form-select d-inline abel-500 mySelect" id="selsec4">
+                            <option value="">Section</option>
+                            <option>Section-1</option>
+                            <option>Section-2</option>
+                            <option>Section-3</option>
+                        </select>&nbsp
+                        <button onclick="addCourse('table4','selcou4','selsec4')" class="btn btn-outline-dark">Add</button>
+                    </div>
+                </div>
+                <div style="margin-top: 2rem;border-bottom: 1px solid #747264;" >
+                    <label class="abel-500" style="font-size: 1.2rem;" for="pword">Set Password</label>
+                    <input class="abel-500" type="password" placeholder="Set Password" style="border: none;font-size: 1.2rem;background-color:#F0F0F0;width:100%;
+                    outline: none;" name="pword" id="pword" required>
+                </div>
+                <p id="errorPword" class="abel-500"></p>
+                <div style="margin-top: 2rem;border-bottom: 1px solid #747264;" >
+                    <label class="abel-500" style="font-size: 1.2rem;" for="cpword">Confirm Password</label>
+                    <input class="abel-500" type="password" placeholder="Re-enter password" style="border: none;font-size: 1.2rem;background-color:#F0F0F0;width:100%;
+                    outline: none;" name="cpword" id="cpword" required>
+                </div>
+                <p id="errorCPword" class="abel-500"></p>
+                <button type="submit" class="btn btn-dark mt-5">Register</button>
+                <p class="mt-4 abel-500" style="font-size: 1.2rem;">Already registered? <a style="color:#265073" href="login.html">Login now</a></p>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var list1=new Array();
+        var list2=new Array();
+        var list3=new Array();
+        var list4=new Array();
+        var temp=new Array();
+        var cl2=0,cl1=0,cl3=0,cl4=0;
+        function list(course,section){
+            this.course=course;
+            this.section=section;
+        }
+        function addCourse(table,course,section){
+            var tableEle=document.getElementById(table);
+            var newRow=tableEle.insertRow(tableEle.rows.length);
+            var newCell;
+            newCell=newRow.insertCell(newRow.cells.length);
+            newCell.innerHTML=document.getElementById(course).value;
+            newCell=newRow.insertCell(newRow.cells.length);
+            newCell.innerHTML=document.getElementById(section).value;
+            newCell=newRow.insertCell(newRow.cells.length);
+            newCell.innerHTML='<button class="btn btn-outline-dark py-0" onclick="deleteCou(event,\''+table+'\')">Delete</button>';
+            obj=new list(document.getElementById(course).value,document.getElementById(section).value);
+            if(table.charAt(5)=='1'){
+                list1[cl1++]=obj;
+                console.log(list1[cl1-1]);
+            }else if(table.charAt(5)=='2'){
+                list2[cl2++]=obj;
+                console.log(list2[cl2-1]);
+            }else if(table.charAt(5)=='3'){
+                list3[cl3++]=obj;
+            }else if(table.charAt(5)=='4'){
+                list4[cl4++]=obj;
+            }
+            // console.log(list2[cl2-1]);
+        }
+        function deleteCou(event,table){
+            event.preventDefault();
+            var tabInd=event.target.closest('tr').rowIndex;
+            document.getElementById(table).deleteRow(tabInd);
+            if(table.charAt(5)=='1'){
+                temp=list1.slice(0,tabInd-1);
+                list1=temp.concat(list1.slice(tabInd));
+                cl1--;
+                console.log(list1[cl1-1]);
+            }else if(table.charAt(5)=='2'){
+                temp=list2.slice(0,tabInd-1);
+                list2=temp.concat(list2.slice(tabInd));
+                console.log(list2[cl2]);
+                cl2--;
+            }else if(table.charAt(5)=='3'){
+                temp=list3.slice(0,tabInd-1);
+                list3=temp.concat(list3.slice(tabInd));
+                cl3--;
+            }else if(table.charAt(5)=='4'){
+                temp=list4.slice(0,tabInd-1);
+                list4=temp.concat(list4.slice(tabInd));
+                cl4--;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            var pwordInput = document.getElementById('pword');
+            var pwordError = document.getElementById('errorPword');
+            var cpwordInput=document.getElementById('cpword');
+            var cpwordError=document.getElementById('errorCPword');
+            var pwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            pwordInput.addEventListener('input', function() {
+                var password = pwordInput.value;
+                if (pwordPattern.test(password)) {
+                    pwordError.textContent = '';
+                } else {
+                    pwordError.style.color="#cc2424";
+                    pwordError.textContent = 'Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.';
+                }
+            });
+            cpwordInput.addEventListener('input',function(){
+                var cp=cpwordInput.value;
+                cpwordError.style.color="#cc2424";
+                cpwordError.textContent='Your password and confirmation password must match';
+
+            })
+            var regForm = document.getElementById('registerForm');
+            regForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                var password = pwordInput.value;
+                var cpassword=cpwordInput.value;
+                if (!pwordPattern.test(password)) {
+                    event.preventDefault();
+                    pwordError.style.color="#cc2424";
+                    pwordError.textContent = 'Please enter a valid password.';
+                }
+                if(!password==cpassword){
+                    event.preventDefault();
+                    cpwordError.style.color="#cc2424";
+                    cpwordError.textContent='Passwords did not match.';
+                }
+                if(pwordPattern.test(password) && password==cpassword){
+                    window.location.href='login.html';
+                }
+            });
+         });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

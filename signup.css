@@ -1,0 +1,76 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+@media all and (max-width:992px){
+    .mylink{
+        border-bottom: #e0e0d3 solid 0.13rem;
+    }
+    
+}
+@media all and (min-width:993px){
+    .mylink{
+        border-right: #e0e0d3 solid 0.13rem;
+    }
+    
+}
+.platypi-regular {
+    font-family: "Platypi", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.abel-600 {
+font-family: "Abel", sans-serif;
+font-weight: 600;
+font-style: normal;
+}
+.abel-500 {
+    font-family: "Abel", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.my-nav{
+    background-color: #EEEEEE;
+}
+.brand-logo{
+    padding: 1rem;
+    color:#313435;
+}
+.mylink{
+    color:#222831;
+    font-size: larger;
+    padding-top:0.5rem;
+    padding-bottom:0.4rem;
+    /* border-right: #F3E96B solid 0.13rem; */
+}
+.mylink:hover{
+    color:#747264;
+}
+/* body{
+    background-image: linear-gradient(to bottom,#EEEEEE,#4F709C);
+    background-repeat:no-repeat;
+    background-size: cover;
+} */
+.styleDiv{
+    background-color: #F0F0F0;
+    border-radius: 1rem;
+}
+.eleDiv{
+    display:flex;
+    align-items: center;
+    color:#747264;
+    border: 1px solid #747264;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-bottom: 0.4rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+.mySelect{
+    font-size: 1rem;
+    font-weight: 500;
+    display: inline;
+    width:auto;
+}

@@ -1,0 +1,51 @@
+.A{
+    font-size: large;
+    background-color:#747264;
+    position: fixed;
+    height: 100%;
+    color: white;
+}
+.A a{
+    padding: 10% 0% 10% 0%;
+    color: white;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container-fluid{height: 100%;}
+.B{
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-left: 200px;
+}
+.C
+{
+    height: 150px;
+    border-top: 10px solid #747264;
+    border-left: 10px solid #747264;
+    border-right: 2px solid #747264;
+    border-bottom: 2px solid #747264;
+    width: 300px;
+    padding: 30px;
+    margin:30px;
+    border-radius: 20px;
+}
+.D{
+    text-align: center;
+    font-size: x-large;
+}
+.E{
+    float: left;
+    font-size: large;
+}
+.F{
+    float: right;
+    font-size: large;
+}
+.B a{
+    text-decoration: none;
+    color: black;
+}

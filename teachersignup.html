@@ -53,29 +53,29 @@
     </nav>
     <!-- Login/Signup -->
     <div class="container-fluid row d-flex justify-content-center mx-0 px-0 my-5 ">
-        <div class="col-10 col-md-6 mx-2 px-5 my-5 py-4 styleDiv">
-            <form id="registerForm" method="post">
+        <div class="col-10 col-md-6 px-5 my-5 py-4 styleDiv container-fluid">
+            <form id="registerForm" method="post" class="container-fluid">
                 <h3 class="abel-600" style="color:#213555;">Registration</h3>
-                <div class="eleDiv">
+                <div class="eleDiv container-fluid">
                     <i class="fa fa-thin fa-user" style="font-size:1.9rem;"></i>
                     <input class="px-3 abel-500" type="text" placeholder="Enter your name" style="border: none;background-color:#F0F0F0;width:100%;
                     outline: none;" name="name" id="name" required>
                 </div>
-                <div class="eleDiv">
+                <div class="eleDiv container-fluid">
                     <i class="fa-regular fa-envelope fa" style="font-size:1.7rem;"></i>
                     <input class="px-3 abel-500" type="email" placeholder="Enter your email" style="border: none;background-color:#F0F0F0;width:100%;
                     outline: none;" name="email" id="email" required>
                 </div>
-                <div class="eleDiv">
+                <div class="eleDiv container-fluid">
                     <i class="fa-solid fa-id-card fa" style="font-size:1.7rem;"></i>
                     <input class="px-3 abel-500" type="text" placeholder="Enter your ID(excluding hyphen(-))" style="border: none;background-color:#F0F0F0;width:100%;
                     outline: none;" name="rollno" id="rollno" required>
                 </div>
-                <div style="margin-top: 2rem;">
+                <div style="margin-top: 2rem;" class="container-fluid">
                     <label class="abel-500" style="font-size: 1.2rem;font-weight: 600;">Add Course details</label><br/>
-                    <div>
+                    <div class="container-fluid">
                         <label class="abel-500 form-label" style="font-size: 1.1rem;">Course Year-1</label>
-                        <table class="table abel-500" id="table1">
+                        <table class="table abel-500 table-container id="table1">
                             <tr>
                                 <th>Course</th>
                                 <th>Section</th>
@@ -101,7 +101,7 @@
                         </select>&nbsp
                         <button onclick="addCourse('table1','selcou1','selsec1')" class="btn btn-outline-dark">Add</button>
                     </div>
-                    <div class="mt-3">
+                    <div class="mt-3 container-fluid">
                         <label class="abel-500 form-label" style="font-size: 1.1rem;">Course Year-2</label>
                         <table class="table abel-500" id="table2">
                             <tr>
@@ -129,16 +129,16 @@
                         </select>&nbsp
                         <button onclick="addCourse('table2','selcou2','selsec2')" class="btn btn-outline-dark">Add</button>
                     </div>
-                    <div class="mt-3">
+                    <div class="mt-3 container-fluid">
                         <label class="abel-500 form-label" style="font-size: 1.1rem;">Course Year-3</label>
-                        <table class="table abel-500" id="table3">
+                        <table class="table abel-500 table-container" id="table3">
                             <tr>
                                 <th>Course</th>
                                 <th>Section</th>
                                 <th></th>
                             </tr>
                         </table>
-                        <select class="form-select d-inline abel-500 mySelect" id="selcou3">
+                        <select class="form-select form-control d-inline abel-500 mySelect" id="selcou3">
                             <option value="">Course</option>
                             <option value="Computer Organization and Architecture">Computer Organization and Architecture</option>
                             <option value="Database Management Systems">Database Management Systems</option>
@@ -148,7 +148,7 @@
                             <option value="Systems and Signal Processing">Systems and Signal Processing</option>
                             <option value="Database Systems Lab">Database Systems Lab</option>
                             <option value="Web Technologies Lab">Web Technologies Lab</option>
-                        </select>&nbsp
+                        </select>
                         <select class="form-select d-inline abel-500 mySelect" id="selsec3">
                             <option value="">Section</option>
                             <option>Section-1</option>
@@ -157,9 +157,9 @@
                         </select>&nbsp
                         <button onclick="addCourse('table3','selcou3','selsec3')" class="btn btn-outline-dark">Add</button>
                     </div>
-                    <div class="mt-3">
+                    <div class="mt-3 container-fluid mx-0 px-0">
                         <label class="abel-500 form-label" style="font-size: 1.1rem;">Course Year-4</label>
-                        <table class="table abel-500" id="table4">
+                        <table class="table abel-500 table-container id="table4">
                             <tr>
                                 <th>Course</th>
                                 <th>Section</th>
@@ -186,13 +186,13 @@
                         <button onclick="addCourse('table4','selcou4','selsec4')" class="btn btn-outline-dark">Add</button>
                     </div>
                 </div>
-                <div style="margin-top: 2rem;border-bottom: 1px solid #747264;" >
+                <div style="margin-top: 2rem;border-bottom: 1px solid #747264;" class="container-fluid">
                     <label class="abel-500" style="font-size: 1.2rem;" for="pword">Set Password</label>
                     <input class="abel-500" type="password" placeholder="Set Password" style="border: none;font-size: 1.2rem;background-color:#F0F0F0;width:100%;
                     outline: none;" name="pword" id="pword" required>
                 </div>
                 <p id="errorPword" class="abel-500"></p>
-                <div style="margin-top: 2rem;border-bottom: 1px solid #747264;" >
+                <div style="margin-top: 2rem;border-bottom: 1px solid #747264;" class="container-fluid">
                     <label class="abel-500" style="font-size: 1.2rem;" for="cpword">Confirm Password</label>
                     <input class="abel-500" type="password" placeholder="Re-enter password" style="border: none;font-size: 1.2rem;background-color:#F0F0F0;width:100%;
                     outline: none;" name="cpword" id="cpword" required>

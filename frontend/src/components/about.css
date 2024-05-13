@@ -1,0 +1,13 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.aboutContentDiv{
+    padding:10px 20px;
+}
+.pTag{
+    font-size: 1.4rem;
+}
+.pSmall{
+    font-size: 1.3rem;
+}
